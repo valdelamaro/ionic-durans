@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar>
+        <figure class="size-logo">
+            <img src="../../assets/durans.png-removebg-preview.png" alt="">
+        </figure>
+        <ion-title>Registro de Cuenta</ion-title>
+        <br>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
+
+        <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input placeholder="Introduzca su nombre completo" formControlName="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input placeholder="Introduzca su apellido" formControlName="last_name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Carrera</ion-label>
+            <ion-select formControlName="career">
+                <ion-select-option *ngFor="let item of ListCareer" value="{{item.type}}">
+                    {{item.display}}
+                </ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Tipo Documento</ion-label>
+            <ion-select formControlName="document_type">
+                <ion-select-option *ngFor="let item of ListDocumentType" value="{{item.type}}">
+                    {{item.display}}
+                </ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Numero documento</ion-label>
+            <ion-input placeholder="Introduzca su numero de documento" formControlName="document_number"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input placeholder="Introduzca su correo Electrónico" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" placeholder="Introduzca su contraseña" formControlName="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button fill="outline" shape="round" type="submit">
+            Registrarse
+        </ion-button>
+    </form>
+    <br><br>
+</ion-content>
+    <ion-button expand="block" fill="outline" (click)="goToLogin()">
+      Volver
+    </ion-button>

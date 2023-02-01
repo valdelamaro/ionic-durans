@@ -1,0 +1,21 @@
+.size-logo img {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+    margin-top: -32px;
+}
+
+ion-button {
+    --background: #de7413;
+    --color: #432b04; 
+    --border-color: #603f01;
+}
+
+ion-toolbar{
+    --background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(185,139,49,1) 20%, rgba(0,0,0,1) 100%);
+
+}
+
+ion-content{
+    --background: linear-gradient(0deg, rgba(0,0,0,1) 4%, rgba(212,149,26,1) 37%, rgba(0,0,0,1) 100%);
+}

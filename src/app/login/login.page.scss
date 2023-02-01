@@ -1,0 +1,34 @@
+.size-logo img {
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+    
+}
+
+ion-icon {
+    color: yellowgreen;
+}
+
+ion-content > div {
+    background-color: #8a8a8a;
+    height: 90%;
+}
+
+ion-item{
+    margin: 10px;
+    border-radius: 10px;
+}
+
+ion-footer{
+    height: 10%;
+}
+
+ion-content{
+    --background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(253,142,45,1) 100%);
+    }
+
+ion-button{
+    
+
+}
